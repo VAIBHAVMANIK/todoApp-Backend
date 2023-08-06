@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import User from "../Models/user.js";
+import User from "../Models/User.js";
 import {catchAsyncError} from "../middlerware/catchAsyncerror.js";
 import { sendCookie } from "../utils/features.js";
 import ErrorHandler  from "../utils/errorhandler.js";
