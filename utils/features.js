@@ -19,9 +19,8 @@ export const sendCookie = (user, res, message, statusCode = 200) => {
   }
   return res
     .status(statusCode)
-    .cookie("token", "", {
-      httpOnly: true,
-      maxAge: new Date(Date.now()),
+    .cookie("token","", {
+      expires: new Date(Date.now()),
       sameSite:process.env.NODE_ENV ==="Development"?"lax":"none",
       secure: process.env.NODE_ENV ==="Development"?false:true
     })

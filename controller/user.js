@@ -44,6 +44,6 @@ export const getProfile = (req, res, next)=>{
     });
 };
 export const logout = (req, res, next)=>{
-    sendCookie({user:null},res);
+    sendCookie(null,res);
 };
 
