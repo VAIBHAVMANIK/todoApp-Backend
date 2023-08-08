@@ -39,7 +39,7 @@ export const updateTask = catchAsyncError(async (req, res, next)=>{
 });
 export const deleteTask = catchAsyncError(async (req, res, next)=>{
     const {id} = req.params;
-    const task = await Task.findByIdAndDelete(id)
+    await Task.findByIdAndDelete(id)
     res.status(200).json({
         Success: true,
         message: "Task Deleted Successfully"

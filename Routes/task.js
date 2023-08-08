@@ -8,5 +8,6 @@ const Error = ErrorHandler;
 
 router.post("/new",isAuthenticated,newTask);
 router.get("/allTask",isAuthenticated,getmyTasks);
-router.route("/:id").patch(isAuthenticated,updateTask).delete(isAuthenticated,deleteTask);
+router.patch("/:id",isAuthenticated,updateTask);
+router.delete("/:id",isAuthenticated,deleteTask);
 export default router;
